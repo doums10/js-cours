@@ -11,3 +11,9 @@ console.log(cours + ' // Après MAJ');
 function faireQuelqueChose() {
 	console.log('je fais un truc');
 }
+const faireUneTache = (type) => {
+	console.log('je fais :' + type);
+}
+faireQuelqueChose();
+faireUneTache('la vaisselle');
+faireUneTache('la cuisine');
