@@ -24,3 +24,45 @@ img {
   transform: translateX(-50%);
   padding: 10px;
 }
+
+.themeContainer {
+  position: fixed;
+  top: 0;
+}
+.theme {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+#dark {
+  background: black;
+}
+#salmon {
+  background: salmon;
+}
+#yellow {
+  background: yellow;
+}
+
+.darkTheme {
+  background: black;
+  color: white;
+}
+.salmonTheme {
+  background: salmon;
+  color: white;
+}
+.yellowTheme {
+  background: yellow;
+  color: black;
+}
+.borderDark{
+	border:1px solid white;
+}
+.borderSalmon{
+	border:1px solid black;
+}
+.borderYellow{
+	border:1px solid black;
+}
