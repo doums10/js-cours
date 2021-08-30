@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+#quote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: grey;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  color: #eee;
+  padding: 2rem;
+  font-size: 2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
