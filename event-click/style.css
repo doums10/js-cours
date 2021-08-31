@@ -11,7 +11,17 @@ body {
 }
 .box {
   border: 6px solid white;
-		transition: .25s;
-		background: black;
-		padding: 10px;
+  transition: 0.25s ease;
+  background: black;
+  padding: 10px;
+}
+p {
+  visibility: hidden;
+		width: 240px;
+		margin: 10px auto 0;
+}
+.question-click{
+	background: rgb(47,47,47);
+	border-radius:30px;
+	border: 6px dashed aquamarine;
 }
