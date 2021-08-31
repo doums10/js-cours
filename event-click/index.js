@@ -6,28 +6,28 @@
 // Click Event
 
 const questionContainer = document.querySelector(".click-event");
-const btn1 = document.querySelector('#btn-1');
+const btn1 = document.querySelector("#btn-1");
 const btn2 = document.getElementById("btn-2");
-const response = document.querySelector('p');
-// pour injecter une propriété de style 
+const response = document.querySelector("p");
+// pour injecter une propriété de style
 // questionContainer.addEventListener('click', () => {
 // 	questionContainer.style.background = "red";
 // })
 
 // pour injecter une class de css avec plusieurs propriétés
 
-
 questionContainer.addEventListener("click", () => {
-	
   questionContainer.classList.toggle("question-click");
 });
 
-btn1.addEventListener('click', () => {
-	response.style.visibility = "visible";
+btn1.addEventListener("click", () => {
+  response.classList.add("show-response");
+  response.style.background = "green";
 });
 btn2.addEventListener("click", () => {
-  	response.style.visibility = "hidden";
-
+  response.classList.add("show-response");
+  response.style.background = "red";
 });
 
+// #id > class > baliseHtml
 //----------------------------------------------
