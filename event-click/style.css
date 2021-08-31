@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  list-style: none;
+}
+body {
+  text-align: center;
+  margin: 0;
+  color: white;
+  min-height: 200vh;
+}
+.box {
+  border: 6px solid white;
+		transition: .25s;
+		background: black;
+		padding: 10px;
+}
