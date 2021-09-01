@@ -73,6 +73,12 @@ response.addEventListener("mouseover", () => {
 
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
+//fonction pour lancer un son 
+const ring = () => {
+	audio = new Audio();
+	audio.src = "./cours_z.mp3";
+	audio.play();
+};
 
 // afficher la touche sur laquelle l'user appuie
 document.addEventListener("keypress", (e) => {
@@ -85,4 +91,7 @@ document.addEventListener("keypress", (e) => {
   } else {
     keypressContainer.style.background = "red";
   }
+		// à chaque touche pressée , lance le son indiqué
+		ring();
 });
+
