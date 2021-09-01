@@ -73,11 +73,11 @@ response.addEventListener("mouseover", () => {
 
 const keypressContainer = document.querySelector(".keypress");
 const key = document.getElementById("key");
-//fonction pour lancer un son 
+//fonction pour lancer un son
 const ring = () => {
-	audio = new Audio();
-	audio.src = "./cours_z.mp3";
-	audio.play();
+  audio = new Audio();
+  audio.src = "./cours_z.mp3";
+  audio.play();
 };
 
 // afficher la touche sur laquelle l'user appuie
@@ -91,7 +91,50 @@ document.addEventListener("keypress", (e) => {
   } else {
     keypressContainer.style.background = "red";
   }
-		// à chaque touche pressée , lance le son indiqué
-		ring();
+  // à chaque touche pressée , lance le son indiqué
+  ring();
 });
 
+//---------------------------------------------------------
+// Scroll Event
+//afficher la nav à un certain moment du scroll(elle est cachée pour l'instant au dessus de la page)
+const nav = document.querySelector("nav");
+//afficher la nav en fonction du scroll down et quand on remonte la nav disparaît
+window.addEventListener("scroll", () => {
+  //console.log(window.scrollY);
+  if (window.scrollY > 120) {
+    nav.style.top = "0";
+  } else {
+    nav.style.top = "-50px";
+  }
+});
+
+//-----------------------------------------------------------
+// Form Events
+const inputName = document.querySelector("input[type=text]");
+const select = document.querySelector("select");
+const form = document.querySelector("form");
+let pseudo = "";
+let language = "";
+console.log(form);
+
+// récupérer ce qui est tapé dans l'input du form
+inputName.addEventListener("input", (e) => {
+  pseudo = e.target.value;
+});
+// récupérer ce qui a été sélectionné dans le select
+select.addEventListener("input", (e) => {
+  language = e.target.value;
+});
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+// injecter la réponse choisie en html dans la div en dessous du form
+  if (cgv.checked) {
+    document.querySelector("form > div").innerHTML = `
+			<h3>Pseudo : ${pseudo}</h3>
+			<h4>Language : ${language}</h4>`;
+  } else {
+    alert("Veuillez accepter les CGV");
+  }
+});
