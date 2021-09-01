@@ -69,5 +69,20 @@ response.addEventListener("mouseover", () => {
 
 //----------------------------------------------------
 
-//Keypress
+//KeyPress Event
 
+const keypressContainer = document.querySelector(".keypress");
+const key = document.getElementById("key");
+
+// afficher la touche sur laquelle l'user appuie
+document.addEventListener("keypress", (e) => {
+  key.textContent = e.key;
+
+  if (e.key === "j") {
+    keypressContainer.style.background = "pink";
+  } else if (e.key === "h") {
+    keypressContainer.style.background = "teal";
+  } else {
+    keypressContainer.style.background = "red";
+  }
+});
