@@ -32,10 +32,42 @@ btn2.addEventListener("click", () => {
 // #id > class > baliseHtml
 //----------------------------------------------
 
-//Mouse Events 
+//Mouse Events
+
+//Quand la souris bouge, récupère moi son emplacement
 const mousemove = document.querySelector(".mousemove");
 window.addEventListener("mousemove", (e) => {
-	mousemove.style.left = e.pageX + "px";
-	mousemove.style.top = e.pageY + "px";
-})
+  mousemove.style.left = e.pageX + "px";
+  mousemove.style.top = e.pageY + "px";
+});
+
+// Quand l'user clique et laisse appuyé,  agrandis le cercle
+window.addEventListener("mousedown", () => {
+  mousemove.style.transform = "scale(2) translate(-25%, -25%)";
+});
+
+// quand l'user relache le click, change la couleur
+window.addEventListener("mouseup", () => {
+  mousemove.style.transform = "scale(1) translate(-50%, -50%)";
+  mousemove.style.border = "2px solid teal";
+});
+
+// quand l'user survole la zone "questionContainer" , change la couleur du background
+questionContainer.addEventListener("mouseenter", () => {
+  questionContainer.style.background = "rgba(0,0,0,0.6)";
+});
+
+// quand l'user sort de la zone questionContainer, change la couleur du bacdkground
+questionContainer.addEventListener("mouseout", () => {
+  questionContainer.style.background = "pink";
+});
+
+// quand l'user survole la réponse, incline le texte de 2deg
+response.addEventListener("mouseover", () => {
+  response.style.transform = "rotate(2deg)";
+});
+
+//----------------------------------------------------
+
+//Keypress
 
