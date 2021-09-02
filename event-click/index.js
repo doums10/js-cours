@@ -116,7 +116,6 @@ const select = document.querySelector("select");
 const form = document.querySelector("form");
 let pseudo = "";
 let language = "";
-console.log(form);
 
 // récupérer ce qui est tapé dans l'input du form
 inputName.addEventListener("input", (e) => {
@@ -129,7 +128,7 @@ select.addEventListener("input", (e) => {
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-// injecter la réponse choisie en html dans la div en dessous du form
+  // injecter la réponse choisie en html dans la div en dessous du form
   if (cgv.checked) {
     document.querySelector("form > div").innerHTML = `
 			<h3>Pseudo : ${pseudo}</h3>
@@ -138,3 +137,13 @@ form.addEventListener("submit", (e) => {
     alert("Veuillez accepter les CGV");
   }
 });
+
+//---------------------------------------------------------
+// Load event
+// Quand on souhaite afficher des choses quand la page est chargé uniquement
+window.addEventListener('load', () => {
+	console.log("Document chargé!");
+})
+
+//----------------------------------------------------------
+//For Each
