@@ -141,9 +141,20 @@ form.addEventListener("submit", (e) => {
 //---------------------------------------------------------
 // Load event
 // Quand on souhaite afficher des choses quand la page est chargé uniquement
-window.addEventListener('load', () => {
-	console.log("Document chargé!");
-})
+window.addEventListener("load", () => {
+  console.log("Document chargé!");
+});
 
 //----------------------------------------------------------
 //For Each
+//const boxes = document.getElementsByClassName("box");
+const boxes = document.querySelectorAll(".box");
+
+// sélectionne tous les éléments avec la classe box et injecte leur la propriété scale à chaque fois que l'on clique dessus.
+boxes.forEach((box) => {
+  box.addEventListener("click", (e) => {
+    e.target.style.transform = "scale(0.7)";
+  });
+});
+
+
