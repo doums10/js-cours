@@ -142,7 +142,7 @@ form.addEventListener("submit", (e) => {
 // Load event
 // Quand on souhaite afficher des choses quand la page est chargé uniquement
 window.addEventListener("load", () => {
-  console.log("Document chargé!");
+  //console.log("Document chargé!");
 });
 
 //----------------------------------------------------------
@@ -157,4 +157,64 @@ boxes.forEach((box) => {
   });
 });
 
+//------------------------------------------------
+// addEventListener Vs onclick
+// document.body.onclick = function() {
+//   console.log("Scroll !");
+// };
 
+// Bubbling => fin (de base l'eventlistener est paramétré en mode Bubbling)
+// document.body.addEventListener("click", () => {
+//   console.log("click 1 !");
+// });
+
+// Usecapture
+// pour forcer une évènement en priorité
+document.body.addEventListener(
+  "click",
+  () => {
+    console.log("click 2 !");
+  },
+  true
+);
+
+// https://gomakethings.com/what-is-that-third-argument-on-the-vanilla-js-addeventlistener-method-and-when-do-you-need-it/
+
+//-------------------------------------------------
+// Stop propagation
+//pour éviter qu'un évènemlent se propage
+// questionContainer.addEventListener("click", (e) => {
+//   alert("Test !");
+//   e.stopPropagation();
+// });
+
+// removeEventListener
+
+//-------------------------------------------------
+// BOM (Browser Object Model)
+
+// The BOM (Browser Object Model) consists of the objects navigator, history, screen, location and document which are children of window. In the document node is the DOM (Document Object Model), the document object model, which represents the contents of the page. You can manipulate it using javascript.
+
+// console.log(window.innerHeight); avoir la taille de l'écran
+// console.log(window.scrollY); avoir l'information du scroll sur la page
+
+// ouvrir une nouvelle page
+// window.open("http://google.com", "cours js", "height=600, width=800");
+
+// fermer une page web
+// window.close()
+
+// Evénements adossés à Window
+// alert("hello");
+
+// confirm
+// pour afficher une popup avec le bouton annuler et Ok(pratique pour demander à l'user des confirmations)
+btn2.addEventListener("click", () => {
+  confirm("Voulez vous vraiment vous tromper ?");
+});
+
+// ajoute un prompt au click du btn1 et affiche la réponse dans un h3 mais n'efface pas ce qui est déjà affiché.
+btn1.addEventListener("click", () => {
+  let answer = prompt("Entrez votre nom");
+  questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
+});
