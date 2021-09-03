@@ -218,3 +218,28 @@ btn1.addEventListener("click", () => {
   let answer = prompt("Entrez votre nom");
   questionContainer.innerHTML += "<h3>Bravo " + answer + "</h3>";
 });
+
+//setTimeout
+//Compte à rebours, Timer
+// injecte un border-radius dans 2 sec
+setTimeout(() => {
+  questionContainer.style.borderRadius = "300px";
+}, 2000);
+
+//Insérer une nouvelle boîte toutes les 4secondes
+//setInterval
+
+// let interval = setInterval(() => {
+//   document.body.innerHTML += `
+//       <div class='box'>
+//         <h2>Nouvelle Boite !</h2>
+//       </div>
+//     `;
+// }, 4000);
+
+//remove
+//supprimmer au clic un élément
+document.body.addEventListener("click", (e) => {
+  e.target.remove();
+  clearInterval(interval);
+});
