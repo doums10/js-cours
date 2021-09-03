@@ -243,3 +243,26 @@ document.body.addEventListener("click", (e) => {
   e.target.remove();
   clearInterval(interval);
 });
+
+// Location
+// avoir des infos sur le site
+// console.log(location.href);
+// console.log(location.host);
+// console.log(location.pathname);
+
+//avoir des infos sur le contenu de la recherche
+// console.log(location.search);
+
+//remplacer le site actuel par celui ci
+// location.replace("http://lequipe.fr");
+
+//Au chargement de la page, mets moi ce site à la place
+// window.onload = () => {
+//   location.href = "http://twitter.fr";
+// };
+
+// Navigator
+//avoir des infos sur l'utilisateur actuel
+// console.log(navigator.userAgent);
+
+// https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
