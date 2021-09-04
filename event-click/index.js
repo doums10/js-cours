@@ -266,3 +266,11 @@ document.body.addEventListener("click", (e) => {
 // console.log(navigator.userAgent);
 
 // https://developer.mozilla.org/fr/docs/Web/API/Geolocation/getCurrentPosition
+
+//History 
+//retiurner sur l'historique des sites visités
+//ex un user qui vient de valider quelquechose, on le fait revenir en arrière avec.back()
+//window.history.back();
+//GO
+//pour aller sur la 2èpage en arrière, mettre le chiffre qu'on veut pour choisir dans l'historique
+//history.go(-2);
