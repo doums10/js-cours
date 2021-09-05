@@ -1,3 +1,7 @@
+const bubbleRemove = document.querySelector("h3");
+//créer un compteur
+let count = 0;
+
 const bubbleMarker = () => {
   // créer un élément et l'insérer dans le body
   const bubble = document.createElement("span");
@@ -18,9 +22,21 @@ const bubbleMarker = () => {
   bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
   const plusMinus = Math.random() > 0.5 ? 1 : -1;
+// Au click supprimer chaque bulle généré
+		bubble.addEventListener('click', () => {
+			//incrémenter le chiffre dans la variable count ligne 3
+			count++;
+			// injecter le chiffre dans le h3 récupéré dans la varible count
+			bubbleRemove.textContent = count;
+			bubble.remove();
+		});
+
   bubble.style.setProperty("--left", Math.random() * 100 + "%");
-		setTimeout(() => {
-				bubble.remove();
-		},8000);
+		// Toutes les 8s, supprimer les bulles
+  setTimeout(() => {
+    bubble.remove();
+  }, 8000);
 };
-setInterval(bubbleMarker, 300);
+
+
+setInterval(bubbleMarker, 1000);
