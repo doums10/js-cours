@@ -1,0 +1,24 @@
+body {
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.bubble{
+	
+	border-radius: 50%;
+	background: rgba(255, 166, 0, 0.6);
+	position: absolute;
+	opacity: 0;
+	animation: anim 8s forwards;
+	/* forwards pour conserver la position de la bulle en montant */
+	filter: hue-rotate(0deg);
+}
+@keyframes anim {
+	to{
+		opacity: 1;
+		top: -250px;
+		left: var(--left);
+		/* /*changer les couleurs en suivant la roue chromatique */
+		filter: hue-rotate(360deg);
+	}
+}
