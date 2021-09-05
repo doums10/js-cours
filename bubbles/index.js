@@ -17,7 +17,10 @@ const bubbleMarker = () => {
   // insérer des valeurs random pour le top et left des bubbles
   bubble.style.top = Math.random() * 100 + 50 + "%";
   bubble.style.left = Math.random() * 100 + "%";
+  const plusMinus = Math.random() > 0.5 ? 1 : -1;
   bubble.style.setProperty("--left", Math.random() * 100 + "%");
+		setTimeout(() => {
+				bubble.remove();
+		},8000);
 };
-setInterval(bubbleMarker, 3000);
- 
+setInterval(bubbleMarker, 300);
