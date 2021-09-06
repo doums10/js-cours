@@ -56,3 +56,10 @@ if (data[0].age > data[1].age) {
 }
 //Ternaire
 // valeur à tester ? si vrai : si faux
+
+// While ---Tant que
+let w = 0;
+while (w < 10) {
+  w++;
+  console.log("la valeur de w est : " + w );
+}
