@@ -16,7 +16,7 @@ let object = {
   technos: ["React", "Javascript", "NodeJs"],
   admin: false,
 };
-// Dans un object 
+// Dans un object
 // ex admin:false
 // admin = index false = valeur
 
@@ -45,3 +45,14 @@ let data = [
   },
 ];
 // console.log(data[1].name);
+// ------------------------------------------------------------
+// Les structures de contrôle
+
+//IF
+if (data[0].age > data[1].age) {
+  // console.log(data[0].name + " est plus âgé que " + data[1].name);
+} else {
+  //Valeur si faux
+}
+//Ternaire
+// valeur à tester ? si vrai : si faux
