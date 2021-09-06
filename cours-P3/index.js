@@ -76,3 +76,22 @@ for (const user of data) {
 
 // tip --> le + devant le = permet de ne pas effacer l'info précédente
 //
+
+//Switch
+// change la couleur du body quand on clique sur l'id de chaque techno
+document.body.addEventListener('click', (e) => {
+	switch (e.target.id) {
+    case "javascript":
+      document.body.style.background = "yellow";
+      break;
+    case "php":
+      document.body.style.background = "blue";
+      break;
+    case "python":
+      document.body.style.background = "green";
+      break;
+
+    default:
+      break;
+  }
+})
