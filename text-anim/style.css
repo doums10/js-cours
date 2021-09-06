@@ -20,8 +20,8 @@ body {
   height: 3rem;
   width: 5px;
   background: black;
-  top: 0;
-  transform: translateY(-4px);
+  top: -11px;
+  transform: translateY(6px);
   right: -5px;
   animation: anim 0.8s linear infinite;
 }
