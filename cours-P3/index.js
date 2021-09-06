@@ -61,5 +61,18 @@ if (data[0].age > data[1].age) {
 let w = 0;
 while (w < 10) {
   w++;
-  console.log("la valeur de w est : " + w );
+  //console.log("la valeur de w est : " + w);
 }
+
+// Les boucles For
+
+for (const user of data) {
+  // document.body.innerHTML += `<li>${user.name} - ${user.age}ans</li> `;
+}
+
+// on déclare la valeur de i / jusqu'où on boucle / on incrémente i si la condition 2 n'est opas remplie
+
+// tant que tu n'as pas le tour entier du tableau, affiche moi les technos quisont dans le tableau
+
+// tip --> le + devant le = permet de ne pas effacer l'info précédente
+//
