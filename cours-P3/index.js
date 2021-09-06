@@ -23,3 +23,25 @@ let object = {
 //ajouter un élément dans un objet
 //object.adresse = "22 rue du code";
 // console.log(object.adresse);
+
+let data = [
+  {
+    name: "Denis",
+    age: 33,
+    technos: ["React", "Javascript", "NodeJs"],
+    admin: false,
+  },
+  {
+    name: "Samia",
+    age: 24,
+    technos: ["CSS", "Javascript", "NodeJs"],
+    admin: false,
+  },
+  {
+    name: "Nikola",
+    age: 33,
+    technos: ["Php", "Javascript", "NodeJs"],
+    admin: false,
+  },
+];
+// console.log(data[1].name);
