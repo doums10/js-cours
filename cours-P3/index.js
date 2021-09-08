@@ -102,6 +102,7 @@ document.body.addEventListener("click", (e) => {
 let string2 = "Javascript est un langage orienté objet";
 // concaténer une chaine de caractères avec un nombre
 // console.log(eval("1" + 2));
+
 // changer string en number
 // parseInt
 // console.log(eval(parseInt("1") + 2));
@@ -125,7 +126,18 @@ let string2 = "Javascript est un langage orienté objet";
 //découper des parties d'une chaine de caractères
 // ex à chaque fois que tu vois un i, tu découpes et tu me les mets dans un tableau
 
-let newString = string2.split("i");
-console.log(newString);
-
+// let newString = string2.split("i");
+// console.log(newString);
 // résultat ['Javascr', 'pt est un langage or', 'enté objet']
+
+//TolowerCase
+// mettre la chaine de caractères en minuscules
+console.log(string2.toLowerCase());
+
+//ToUpperCase
+// mettre en majuscule
+console.log(string2.toUpperCase());
+
+//Replace
+// pour remplacer un element dans la chaine de caractères
+console.log(string2.replace("Javascript", "PHP"));
