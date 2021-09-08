@@ -79,8 +79,8 @@ for (const user of data) {
 
 //Switch
 // change la couleur du body quand on clique sur l'id de chaque techno
-document.body.addEventListener('click', (e) => {
-	switch (e.target.id) {
+document.body.addEventListener("click", (e) => {
+  switch (e.target.id) {
     case "javascript":
       document.body.style.background = "yellow";
       break;
@@ -94,4 +94,38 @@ document.body.addEventListener('click', (e) => {
     default:
       break;
   }
-})
+});
+
+//Methodes String
+//methode js = fonctions déjà codées
+
+let string2 = "Javascript est un langage orienté objet";
+// concaténer une chaine de caractères avec un nombre
+// console.log(eval("1" + 2));
+// changer string en number
+// parseInt
+// console.log(eval(parseInt("1") + 2));
+//result 3
+
+//connaitre la longueur d'un caractère
+//length
+// console.log(string2.length);
+//pour obtenir la dernière lettre de string 2
+//console.log(string2[string2.length -1]);
+
+//Slice
+//couper un nombre de caractères
+// let newString = string2.slice(2);
+// console.log(newString);
+//couper plusieurs parties ex à partir de la 5ème lettre et jusqu'à la 17 ème
+// let newString = string2.slice(5, 17);
+// console.log(newString);
+
+// Split
+//découper des parties d'une chaine de caractères
+// ex à chaque fois que tu vois un i, tu découpes et tu me les mets dans un tableau
+
+let newString = string2.split("i");
+console.log(newString);
+
+// résultat ['Javascr', 'pt est un langage or', 'enté objet']
