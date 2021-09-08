@@ -97,6 +97,7 @@ document.body.addEventListener("click", (e) => {
 });
 
 //Methodes String
+
 //methode js = fonctions déjà codées
 
 let string2 = "Javascript est un langage orienté objet";
@@ -141,3 +142,34 @@ console.log(string2.toUpperCase());
 //Replace
 // pour remplacer un element dans la chaine de caractères
 console.log(string2.replace("Javascript", "PHP"));
+
+// -----------------------------------------------
+// Méthode Numbers
+// toFixed
+// garder un nombre derrière la virgule ex 42,1456
+// let number2 = 42.1456;
+// console.log(number2.toFixed(2));
+//result 42,15
+
+//Math
+
+//Math.round
+// pour arrondir un chiffre 
+console.log(Math.round(4.5));
+//result 5
+
+//Math.floor
+//arrondir un chiffre au plus bas
+console.log(Math.floor(4.9));
+//result 4
+
+//Math.ceil
+//arrondir un chiffre au plus haut
+console.log(Math.ceil(4.9));
+//result 5
+
+//Math.random
+// chiffre entre 1 et 50
+console.log(Math.random() * 50);
+//si l'on veut sans virgule
+ console.log(Math.floor(Math.random() * 50));
