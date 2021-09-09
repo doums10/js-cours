@@ -41,7 +41,7 @@ let data = [
     name: "Nikola",
     age: 33,
     technos: ["Php", "Javascript", "NodeJs"],
-    admin: false,
+    admin: true,
   },
 ];
 // console.log(data[1].name);
@@ -256,3 +256,20 @@ arrayNumber.map((number) => console.log(number));
 
 // -------------------------------------------
 // Méthodes Objets
+
+// les memes méthodes que les méthodes array
+// Afficher les objets qui sont dans le tableau "data" ligne 27
+document.body.innerHTML += data
+//filtrer et afficher que ceux qui ont le statut admin sur false
+.filter((user) => user.admin === false)
+//trier par age
+.sort((a, b) => a.age - b.age)
+  .map(
+    (user) => `<div class="user-card">
+            <h2>${user.name}</h2>
+            <p>Age : ${user.age}</p>
+            <p>Status : ${user.admin ? "Modérateur" : "Membre"}</p>
+              </div>`
+  )
+  .join("");
+//result °Denis °Samia °Nikola en liste
