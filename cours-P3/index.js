@@ -154,22 +154,105 @@ console.log(string2.replace("Javascript", "PHP"));
 //Math
 
 //Math.round
-// pour arrondir un chiffre 
-console.log(Math.round(4.5));
+// pour arrondir un chiffre
+// console.log(Math.round(4.5));
 //result 5
 
 //Math.floor
 //arrondir un chiffre au plus bas
-console.log(Math.floor(4.9));
+// console.log(Math.floor(4.9));
 //result 4
 
 //Math.ceil
 //arrondir un chiffre au plus haut
-console.log(Math.ceil(4.9));
+// console.log(Math.ceil(4.9));
 //result 5
 
 //Math.random
 // chiffre entre 1 et 50
-console.log(Math.random() * 50);
+// console.log(Math.random() * 50);
 //si l'on veut sans virgule
- console.log(Math.floor(Math.random() * 50));
+//  console.log(Math.floor(Math.random() * 50));
+
+//--------------------------------------------------
+// Méthodes Arrays
+
+//Fusionner 2 tableaux
+let array3 = ["Javascript", "Ruby", "Python", "Php"];
+let array4 = ["Paris", "Bordeaux", "Miami"];
+
+//Concat()
+console.log(array3.concat(array4));
+
+// Autre méthode
+// Spread operator
+
+let newArray = [...array3, ...array4];
+console.log(newArray);
+
+// Casser un tableau et insérer des choses à l'intérieur
+//Join
+// ajout d'un slash entre les éléments du tableau array3
+console.log(array3.join("/"));
+// result Javascript/Ruby/Python/Php
+
+//Découper un élément du tableau
+//Slice
+console.log(array3.slice(2));
+// result [("Python", "Php")];
+
+// Avec 2 paramètres ex tu supprimes les 2 premiers éléments jusqu'au 5éme
+console.log(newArray.slice(2, 5));
+// affiche ceux qui sont entre le 2ème élément et le 5ème, les autres tu les enlèves
+
+// Affiche les éléments d'un tableau
+//ForEach
+// à chaque tour de boucle, affiche moi l'élément
+array3.forEach((languages) => {
+  console.log(languages);
+});
+
+//Supprimer 1er élément
+//Shift
+console.log(array3.shift());
+//Supprimer dernier  élément
+// Pop
+console.log(array3.pop());
+
+// IMPORTANT //
+
+// Additionner des éléments d'un tableau
+let arrayNumber = [4, 10, 32, 65, 120];
+console.log(arrayNumber.reduce((x, y) => x + y));
+
+//Ajouter un élément
+// console.log(arrayNumber.push(17));
+// console.log(arrayNumber);
+// result [(4, 10, 32, 65, 120, 17)];
+
+// FILTER, SORT , MAP
+
+// Filtrer les numéros du tableau supérieur à 10
+// console.log(arrayNumber.filter((number) => (number)> 10));
+// result[(32, 65, 120)];
+
+//Trier par index, ex tous les chiffres avec 1 en premier, ensuite ceux avec 2, etc....
+// console.log(arrayNumber.sort());
+//result [10, 120, 32, 4, 65]
+
+// Trier du plus petit au plus grand
+console.log(arrayNumber.sort((a, b) => a - b));
+//result [(4, 10, 32, 65, 120)];
+
+// Afficher les éléments du tableau
+arrayNumber.map((number) => console.log(number));
+// => affiche des elements dans la console
+// document.body.innerHTML += arrayNumber.map((number) => `<li>${number}</li>`);
+// result chiffre avec une virgule entre chaque
+// => pour supprimer les virgules
+// document.body.innerHTML += arrayNumber
+//   .map((number) => `<li>${number}</li>`)
+//   .join("");
+
+// -------------------------------------------
+// Méthodes Objets
