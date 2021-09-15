@@ -186,7 +186,7 @@ console.log(array3.concat(array4));
 
 // Autre méthode
 // Spread operator
-
+// séparer les éléments d'un tableau en plusieurs éléments 
 let newArray = [...array3, ...array4];
 console.log(newArray);
 

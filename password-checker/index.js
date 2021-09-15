@@ -22,8 +22,20 @@ const generatePassword = () => {
   for (i = 0; i < rangeValue.value; i++) {
     password += data[Math.floor(Math.random() * data.length)];
   }
-		// on ne peut pas insérer de textcontent ou de innerhtml sur un input
-		passwordOutput.value = password;
+  // on ne peut pas insérer de textcontent ou de innerhtml sur un input
+  passwordOutput.value = password;
+  //sélectionner le texte
+  //.select
+  passwordOutput.select();
+  //copier un élément
+  //navigator.clipboard.writeText(passwordOutput.value);
+  navigator.clipboard.writeText(passwordOutput.value);
+  //afficher "Copié !" quand le mdp est copié
+		
+		generateButton.textContent = "Copié !";
+  setTimeout(() => {
+			generateButton.textContent = "Générer mot de passe";
+  }, 2000);
 };
 
 generateButton.addEventListener("click", () => {
